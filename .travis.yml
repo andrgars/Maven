@@ -5,6 +5,9 @@ jdk:
   - oraclejdk8
 notifications:
   email:
-    - garsmark@gmail.com
+    recipients:
+      - garsmark@gmail.com
+    on_success: [always|never|change] # default: change
+    on_failure: [always|never|change] # default: always
 after_success:
   - bash <(curl -s https://codecov.io/bash)
